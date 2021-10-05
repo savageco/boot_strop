@@ -1,0 +1,5 @@
+- name: install basic utilities
+  apt:
+    name: "{{ basic_utilities }}"
+    state: latest
+  become: yes

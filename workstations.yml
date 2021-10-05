@@ -1,0 +1,6 @@
+---
+# file: workstations.yml
+- hosts: laptops
+  roles:
+    - basics
+
