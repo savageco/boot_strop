@@ -1,0 +1,19 @@
+---
+
+basic_utilities:
+  - htop
+  - curl
+  - unzip
+  - zip
+  - wget
+  - xclip
+  - powerline
+  - fonts-powerline
+  - silversearcher-ag
+  - build-essential
+  - libssl-dev
+  - libreadline-dev
+  - zlib1g-dev
+  - aspell
+  - imagemagick
+  - vim
