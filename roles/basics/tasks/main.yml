@@ -3,3 +3,14 @@
     name: "{{ basic_utilities }}"
     state: latest
   become: yes
+- name: install well behaved everyday apps
+  snap:
+    name: "{{ everyday_apps }}"
+    state: present
+  become: yes
+- name: install uncouth everyday apps
+  snap:
+    name: "{{ uncouth_everyday_apps }}"
+    state: present
+    classic: yes
+  become: yes

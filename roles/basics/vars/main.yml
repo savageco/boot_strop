@@ -17,3 +17,9 @@ basic_utilities:
   - aspell
   - imagemagick
   - vim
+
+everyday_apps:
+  - signal-desktop
+  - discord
+uncouth_everyday_apps:
+  - slack
