@@ -14,6 +14,7 @@
   git:
     repo: git@github.com:hlissner/doom-emacs.git
     dest: ~/.emacs.d
+    depth: 1
 
 - name: sync doom
   shell:
@@ -26,3 +27,8 @@
 - name: install doom icons and fonts
   shell:
     cmd: yes 'y' | emacs -l ~/.emacs.d/init.el --batch -f all-the-icons-install-fonts
+
+- name: fetch the org repository
+  git:
+    repo: git@github.com:savageco/org.git
+    dest: ~/org
