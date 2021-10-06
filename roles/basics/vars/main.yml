@@ -43,6 +43,7 @@ everyday_apps:
   - discord
   - zoom-client
   - chromium
+  - hey-mail
 
 uncouth_everyday_apps:
   - slack
