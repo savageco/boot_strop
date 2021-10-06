@@ -1,0 +1,16 @@
+---
+
+- name: install rbenv
+  apt:
+    name: rbenv
+  become: yes
+
+- name: install ruby versions
+  shell: "rbenv install {{ item }}"
+  with_items: "{{ ruby_versions }}"
+
+- name: install default gems for rubies
+  shell: "~/.rbenv/versions/{{ item[0] }}/bin/gem install {{item[1]}}"
+  with_nested:
+    - "{{ ruby_versions }}"
+    - "{{ default_gems }}"
