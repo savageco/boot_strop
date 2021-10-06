@@ -2,3 +2,5 @@
 
 dotfiles_to_symlink:
   - .zshrc
+  - .psqlrc
+  - .doom.d
