@@ -18,10 +18,16 @@ basic_utilities:
   - imagemagick
   - vim
   - fd-find
+  - ripgrep
+  - software-properties-common
+  - libtool-bin
+  - cmake
 
 everyday_apps:
   - signal-desktop
   - discord
+  - zoom-client
+  - chromium
+
 uncouth_everyday_apps:
   - slack
-  - ripgrep
