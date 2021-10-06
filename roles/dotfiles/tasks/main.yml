@@ -2,7 +2,7 @@
 
 - name: pull dotfiles from github
   git:
-    repo: https://github.com/savageco/.dotdot.git
+    repo: git@github.com:savageco/.dotdot.git
     dest: ~/.dotdot
 
 - name: symlink dotfiles
