@@ -1,0 +1,4 @@
+---
+
+dotfiles_to_symlink:
+  - .zshrc

@@ -1,0 +1,13 @@
+---
+
+- name: pull dotfiles from github
+  git:
+    repo: https://github.com/savageco/.dotdot.git
+    dest: ~/.dotdot
+
+- name: symlink dotfiles
+  file:
+    src: "~/.dotdot/{{ item }}"
+    dest: "~/{{ item }}"
+    state: link
+  with_items: "{{ dotfiles_to_symlink }}"
