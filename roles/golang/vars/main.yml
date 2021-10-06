@@ -1,0 +1,18 @@
+
+# URL from https://golang.org/dl/
+golang_tarball_url: "https://dl.google.com/go/go1.17.1.linux-amd64.tar.gz"
+
+go_tarball: "go1.17.1.linux-amd64.tar.gz"
+
+go_tarball_checksum: "sha256:dab7d9c34361dc21ec237d584590d72500652e7c909bf082758fb63064fca0ef"
+
+go_get_things:
+  - github.com/stamblerre/gocode
+  - github.com/x-motemen/gore/cmd/gore
+  - github.com/stamblerre/gocode
+  - golang.org/x/tools/cmd/godoc
+  - golang.org/x/tools/cmd/goimports
+  - golang.org/x/tools/cmd/gorename
+  - golang.org/x/tools/cmd/guru
+  - github.com/cweill/gotests/...
+  - github.com/fatih/gomodifytags

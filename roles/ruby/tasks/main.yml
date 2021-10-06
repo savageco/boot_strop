@@ -7,10 +7,14 @@
 
 - name: install ruby versions
   shell: "rbenv install {{ item }}"
+  args:
+    creates: "~/.rbenv/versions/{{ item }}"
   with_items: "{{ ruby_versions }}"
+  register: ruby_install
 
 - name: install default gems for rubies
   shell: "~/.rbenv/versions/{{ item[0] }}/bin/gem install {{item[1]}}"
   with_nested:
     - "{{ ruby_versions }}"
     - "{{ default_gems }}"
+  when: ruby_install.changed
