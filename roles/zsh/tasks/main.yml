@@ -23,7 +23,7 @@
   when: not stat_omz_result.stat.exists
 
 - name: Run oh-my-zsh installer
-  shell: /tmp/zsh-installer.sh --unattended
+  shell: /tmp/zsh-installer.sh --unattended --keep-zshrc
   when: not stat_omz_result.stat.exists
 
 - name: Remove the zsh-installer.sh
