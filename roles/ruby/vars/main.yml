@@ -1,0 +1,11 @@
+---
+
+ruby_versions:
+  - 3.0.2
+  - 2.7.4
+
+default_gems:
+  - bundler
+  - pry
+  - pry-doc
+  - rails
