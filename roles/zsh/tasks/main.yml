@@ -1,0 +1,30 @@
+---
+
+- name: install zsh
+  apt:
+    name: zsh
+    state: latest
+  become: yes
+
+- name: change user's shell to zsh
+  become: yes
+  command: sudo chsh -s /bin/zsh "{{ shell_user }}"
+
+- name: Check if .oh-my-zsh exists
+  stat:
+    path: ~/.oh-my-zsh
+  register: stat_omz_result
+
+- name: Get oh-my-zsh installer
+  get_url:
+    url: https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+    dest: /tmp/zsh-installer.sh
+    mode: a+x
+  when: not stat_omz_result.stat.exists
+
+- name: Run oh-my-zsh installer
+  shell: /tmp/zsh-installer.sh --unattended
+  when: not stat_omz_result.stat.exists
+
+- name: Remove the zsh-installer.sh
+  file: path=/tmp/zsh-installer.sh state=absent

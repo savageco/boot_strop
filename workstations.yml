@@ -3,4 +3,5 @@
 - hosts: laptops
   roles:
     - basics
+    - zsh
 
