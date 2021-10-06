@@ -1,0 +1,21 @@
+---
+- name: Download the golang tarball
+  get_url:
+    url: "{{ golang_tarball_url }}"
+    dest: /usr/local/src/{{ go_tarball }}
+    checksum: "{{ go_tarball_checksum }}"
+  become: yes
+
+- name: Extract the golang tarball
+  unarchive:
+    src: /usr/local/src/{{ go_tarball }}
+    dest: /usr/local
+    copy: no
+  become: yes
+
+- name: go get some common packages
+  shell: "/usr/local/go/bin/go get -u {{ item }}"
+  with_items: "{{ go_get_things }}"
+
+- name: go get gopls
+  shell: GO111MODULE=on /usr/local/go/bin/go get golang.org/x/tools/gopls@latest
