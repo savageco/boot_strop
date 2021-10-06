@@ -17,6 +17,7 @@ basic_utilities:
   - aspell
   - imagemagick
   - vim
+  - fd-find
 
 everyday_apps:
   - signal-desktop

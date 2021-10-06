@@ -1,0 +1,28 @@
+---
+
+- name: Add the kelleyk emacs repository
+  apt_repository:
+    repo: ppa:kelleyk/emacs
+  become: yes
+
+- name: install emacs 27
+  apt:
+    name: emacs27
+  become: yes
+
+- name: install doom
+  git:
+    repo: git@github.com:hlissner/doom-emacs.git
+    dest: ~/.emacs.d
+
+- name: sync doom
+  shell:
+    cmd: ~/.emacs.d/bin/doom sync
+    
+- name: create doom env
+  shell:
+    cmd: ~/.emacs.d/bin/doom env
+
+- name: install doom icons and fonts
+  shell:
+    cmd: yes 'y' | emacs -l ~/.emacs.d/init.el --batch -f all-the-icons-install-fonts
