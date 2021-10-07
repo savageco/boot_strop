@@ -37,6 +37,7 @@ basic_utilities:
   - libdb-dev
   # End rbenv dependencies
   - tilix
+  - gnome-tweaks
 
 everyday_apps:
   - signal-desktop
