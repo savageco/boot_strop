@@ -24,6 +24,7 @@ basic_utilities:
   - texlive
   - pandoc
   - shellcheck
+  # Start rbenv dependencies
   - autoconf
   - bison
   - libyaml-dev
@@ -34,9 +35,8 @@ basic_utilities:
   - libgdbm6
   - libgdbm-dev
   - libdb-dev
-# # Depending on your version of Ubuntu/Debian/Mint, libgdbm6 won't be available.
-# # In that case, try an earlier version such as libgdbm5.
-# apt-get install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
+  # End rbenv dependencies
+  - tilix
 
 everyday_apps:
   - signal-desktop
