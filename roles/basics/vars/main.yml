@@ -24,6 +24,7 @@ basic_utilities:
   - texlive
   - pandoc
   - shellcheck
+  - jq
   # Start rbenv dependencies
   - autoconf
   - bison
@@ -38,6 +39,8 @@ basic_utilities:
   # End rbenv dependencies
   - tilix
   - gnome-tweaks
+  - mosh
+
 
 everyday_apps:
   - signal-desktop
