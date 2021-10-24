@@ -9,3 +9,4 @@ default_gems:
   - pry
   - pry-doc
   - rails
+  - solargraph
